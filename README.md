@@ -1,4 +1,4 @@
-# Clinic Scheduling & Billing System
+# Clinic Scheduling & Billing System | AI Assisted Development
 
 A full-stack application for managing patient appointments and billing in a small clinic, built with a .NET 8 backend and an Angular frontend.
 
