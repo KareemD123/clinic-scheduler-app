@@ -19,6 +19,11 @@ The project follows a clean, service-oriented architecture to ensure a clear sep
 - **Payment Processing**: Process payments for invoices and generate a receipt.
 - **Clean API Design**: A RESTful API with a consistent response format and error handling.
 
+
+<img width="1199" height="754" alt="Screenshot 2025-09-29 at 10 46 02 PM" src="https://github.com/user-attachments/assets/375b3012-531b-43ac-ae0d-bfc46a98e702" />
+<img width="1220" height="804" alt="Screenshot 2025-09-29 at 10 46 14 PM" src="https://github.com/user-attachments/assets/d069f00d-a0cf-4fbf-9c9f-5efef19a5f9c" />
+<img width="1140" height="719" alt="Screenshot 2025-09-29 at 10 46 30 PM" src="https://github.com/user-attachments/assets/2cb2793d-c14e-42c5-a8a9-4237c18577a1" />
+
 ## Technology Stack
 
 - **Backend**: .NET 8, ASP.NET Core, xUnit, Moq, FluentAssertions
