@@ -1,6 +1,0 @@
-{
-  "ClinicScheduling.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/kareem\/Developer\/RXNT\/clinic-scheduler-app\/backend\/ClinicScheduling.API",
-  "ClinicScheduling.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/kareem\/Developer\/RXNT\/clinic-scheduler-app\/backend\/ClinicScheduling.Application",
-  "ClinicScheduling.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/kareem\/Developer\/RXNT\/clinic-scheduler-app\/backend\/ClinicScheduling.Domain",
-  "ClinicScheduling.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/kareem\/Developer\/RXNT\/clinic-scheduler-app\/backend\/ClinicScheduling.Infrastructure"
-}
