@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Appointments</h2>
+
+  <div *ngIf="loading" class="loading">
+    Loading appointments...
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!loading && appointments.length === 0 && !errorMessage" class="no-appointments">
+    <p>No appointments found.</p>
+    <button class="btn btn-primary" routerLink="/appointments/create">
+      Schedule First Appointment
+    </button>
+  </div>
+
+  <div *ngIf="!loading && appointments.length > 0" class="appointments-list">
+    <div class="appointment-card" *ngFor="let appointment of appointments">
+      <div class="appointment-header">
+        <h3>{{ appointment.patientName }}</h3>
+        <span class="status-badge" [ngClass]="getStatusClass(appointment.status)">
+          {{ appointment.status | titlecase }}
+        </span>
+      </div>
+      
+      <div class="appointment-details">
+        <div class="detail-row">
+          <strong>Doctor:</strong> {{ appointment.doctorName }}
+        </div>
+        <div class="detail-row">
+          <strong>Date & Time:</strong> {{ formatDateTime(appointment.appointmentDateTime) }}
+        </div>
+        <div class="detail-row">
+          <strong>Duration:</strong> {{ appointment.duration }} minutes
+        </div>
+        <div class="detail-row">
+          <strong>Reason:</strong> {{ appointment.reason }}
+        </div>
+        <div class="detail-row" *ngIf="appointment.notes">
+          <strong>Notes:</strong> {{ appointment.notes }}
+        </div>
+        <div class="detail-row">
+          <strong>Created:</strong> {{ formatDateTime(appointment.createdAt) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions" *ngIf="!loading">
+    <button class="btn btn-primary" routerLink="/appointments/create">
+      Schedule New Appointment
+    </button>
+  </div>
+</div>

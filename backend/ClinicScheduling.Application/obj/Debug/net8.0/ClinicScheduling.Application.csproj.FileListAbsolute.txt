@@ -1,0 +1,15 @@
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/bin/Debug/net8.0/ClinicScheduling.Application.deps.json
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/bin/Debug/net8.0/ClinicScheduling.Application.dll
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/bin/Debug/net8.0/ClinicScheduling.Application.pdb
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/bin/Debug/net8.0/ClinicScheduling.Domain.dll
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/bin/Debug/net8.0/ClinicScheduling.Domain.pdb
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.csproj.AssemblyReference.cache
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.AssemblyInfoInputs.cache
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.AssemblyInfo.cs
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.csproj.CoreCompileInputs.cache
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.csproj.CopyComplete
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.dll
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/refint/ClinicScheduling.Application.dll
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ClinicScheduling.Application.pdb
+/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/obj/Debug/net8.0/ref/ClinicScheduling.Application.dll

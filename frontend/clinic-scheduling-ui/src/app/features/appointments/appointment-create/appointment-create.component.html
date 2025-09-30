@@ -1,0 +1,126 @@
+<div class="container">
+  <h2>Schedule Appointment</h2>
+  
+  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()" *ngIf="!successMessage">
+    <div class="form-group">
+      <label for="patientId">Patient *</label>
+      <select 
+        id="patientId" 
+        formControlName="patientId"
+        class="form-control"
+      >
+        <option value="">Select a patient</option>
+        <option *ngFor="let patient of patients" [value]="patient.id">
+          {{ patient.firstName }} {{ patient.lastName }} - {{ patient.email }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="doctorId">Doctor *</label>
+      <select 
+        id="doctorId" 
+        formControlName="doctorId"
+        class="form-control"
+      >
+        <option value="">Select a doctor</option>
+        <option *ngFor="let doctor of doctors" [value]="doctor.id">
+          Dr. {{ doctor.firstName }} {{ doctor.lastName }} - {{ doctor.specialization }} (${{ doctor.consultationFee }})
+        </option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="appointmentDateTime">Appointment Date & Time *</label>
+        <input 
+          type="datetime-local" 
+          id="appointmentDateTime" 
+          formControlName="appointmentDateTime"
+          class="form-control"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Duration (minutes) *</label>
+        <input 
+          type="number" 
+          id="duration" 
+          formControlName="duration"
+          class="form-control"
+          min="15"
+          step="15"
+        />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="reason">Reason for Visit *</label>
+      <input 
+        type="text" 
+        id="reason" 
+        formControlName="reason"
+        class="form-control"
+        placeholder="e.g., Annual checkup, Follow-up visit"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea 
+        id="notes" 
+        formControlName="notes"
+        class="form-control"
+        rows="3"
+        placeholder="Additional notes (optional)"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input 
+          type="checkbox" 
+          formControlName="generateInvoice"
+        />
+        Generate Invoice
+      </label>
+    </div>
+
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <div class="form-actions">
+      <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="appointmentForm.invalid || loading"
+      >
+        {{ loading ? 'Scheduling...' : 'Schedule Appointment' }}
+      </button>
+    </div>
+  </form>
+
+  <div class="success-container" *ngIf="successMessage">
+    <div class="success-message">
+      <h3>✓ {{ successMessage }}</h3>
+      <p *ngIf="invoiceId">An invoice has been generated for this appointment.</p>
+    </div>
+
+    <div class="form-actions">
+      <button 
+        class="btn btn-primary"
+        (click)="proceedToPayment()"
+        *ngIf="invoiceId"
+      >
+        Proceed to Payment
+      </button>
+      <button 
+        class="btn btn-secondary"
+        (click)="router.navigate(['/appointments'])"
+      >
+        View All Appointments
+      </button>
+    </div>
+  </div>
+</div>

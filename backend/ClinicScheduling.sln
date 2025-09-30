@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicScheduling.API", "ClinicScheduling.API\ClinicScheduling.API.csproj", "{3E753F81-5842-40DC-9D0B-B447895E06DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicScheduling.Application", "ClinicScheduling.Application\ClinicScheduling.Application.csproj", "{4357ADD5-DC2C-4FD7-A4FE-21982560CFD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicScheduling.Domain", "ClinicScheduling.Domain\ClinicScheduling.Domain.csproj", "{A7BED2B0-9D86-4985-8314-5C495EFEC8C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicScheduling.Infrastructure", "ClinicScheduling.Infrastructure\ClinicScheduling.Infrastructure.csproj", "{14343D6E-763E-495E-A420-E29B5DE8D30E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicScheduling.Tests", "ClinicScheduling.Tests\ClinicScheduling.Tests.csproj", "{431AC642-65CB-4F05-A778-1F0DE9B9C4B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E753F81-5842-40DC-9D0B-B447895E06DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E753F81-5842-40DC-9D0B-B447895E06DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E753F81-5842-40DC-9D0B-B447895E06DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E753F81-5842-40DC-9D0B-B447895E06DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4357ADD5-DC2C-4FD7-A4FE-21982560CFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4357ADD5-DC2C-4FD7-A4FE-21982560CFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4357ADD5-DC2C-4FD7-A4FE-21982560CFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4357ADD5-DC2C-4FD7-A4FE-21982560CFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7BED2B0-9D86-4985-8314-5C495EFEC8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7BED2B0-9D86-4985-8314-5C495EFEC8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7BED2B0-9D86-4985-8314-5C495EFEC8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7BED2B0-9D86-4985-8314-5C495EFEC8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14343D6E-763E-495E-A420-E29B5DE8D30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14343D6E-763E-495E-A420-E29B5DE8D30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14343D6E-763E-495E-A420-E29B5DE8D30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14343D6E-763E-495E-A420-E29B5DE8D30E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431AC642-65CB-4F05-A778-1F0DE9B9C4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431AC642-65CB-4F05-A778-1F0DE9B9C4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431AC642-65CB-4F05-A778-1F0DE9B9C4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431AC642-65CB-4F05-A778-1F0DE9B9C4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

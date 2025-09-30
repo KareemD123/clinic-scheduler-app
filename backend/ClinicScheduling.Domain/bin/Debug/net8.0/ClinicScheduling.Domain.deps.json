@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ClinicScheduling.Domain/1.0.0": {
+        "runtime": {
+          "ClinicScheduling.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClinicScheduling.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

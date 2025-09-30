@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>All Patients</h2>
+
+  <div *ngIf="loading" class="loading">
+    Loading patients...
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="!loading && patients.length === 0 && !errorMessage" class="no-patients">
+    <p>No patients found.</p>
+    <button class="btn btn-primary" routerLink="/patients/create">
+      Create First Patient
+    </button>
+  </div>
+
+  <div *ngIf="!loading && patients.length > 0" class="patients-list">
+    <div class="patient-card" *ngFor="let patient of patients">
+      <div class="patient-header">
+        <h3>{{ patient.firstName }} {{ patient.lastName }}</h3>
+      </div>
+      
+      <div class="patient-details">
+        <div class="detail-row">
+          <strong>Email:</strong> {{ patient.email }}
+        </div>
+        <div class="detail-row">
+          <strong>Phone:</strong> {{ patient.phone }}
+        </div>
+        <div class="detail-row">
+          <strong>Patient ID:</strong> {{ patient.id }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions" *ngIf="!loading">
+    <button class="btn btn-primary" routerLink="/patients/create">
+      Add New Patient
+    </button>
+  </div>
+</div>

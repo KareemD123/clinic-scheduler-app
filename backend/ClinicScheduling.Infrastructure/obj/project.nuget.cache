@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XJSKZF5aIOBggGhTrjemXDALeM11UMKYqTRI5cZV9LXv+SnC+MKjRagfLI3x5faEz7jgAKjuYsDWa3GGCsS1tg==",
+  "success": true,
+  "projectFilePath": "/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Infrastructure/ClinicScheduling.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/Users/kareem/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

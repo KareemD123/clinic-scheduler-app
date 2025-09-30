@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FMolpsCD4H7NjFT3idbPtEOgmgmBvul23mM7mqqNPj58Ty0+rSLOx4dcvX1rfaDB4XvPHxp4hRc0DubAe0Y8Eg==",
+  "success": true,
+  "projectFilePath": "/Users/kareem/Developer/RXNT/clinic-scheduler-app/backend/ClinicScheduling.Application/ClinicScheduling.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/kareem/.nuget/packages/fluentvalidation/12.0.0/fluentvalidation.12.0.0.nupkg.sha512",
+    "/Users/kareem/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.0.0/fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
+    "/Users/kareem/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
