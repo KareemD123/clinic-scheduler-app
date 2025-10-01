@@ -36,6 +36,8 @@ builder.Services.AddCors(options =>
                 "http://localhost:4201", 
                 "http://localhost:5000",
                 "https://clinic-scheduler-cpcfhfeha8hpb6gs.canadacentral-01.azurewebsites.net",
+                "https://brave-island-0fb1dfd0f.2.azurestaticapps.net",
+                "https://*.azurestaticapps.net",
                 "https://*.vercel.app"
             )
             .AllowAnyHeader()
