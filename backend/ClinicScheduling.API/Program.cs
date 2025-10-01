@@ -9,15 +9,37 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add HTTP logging
+builder.Services.AddHttpLogging(logging =>
+{
+    logging.LoggingFields = Microsoft.AspNetCore.HttpLogging.HttpLoggingFields.All;
+    logging.RequestHeaders.Add("sec-ch-ua");
+    logging.ResponseHeaders.Add("MyResponseHeader");
+    logging.MediaTypeOptions.AddText("application/javascript");
+    logging.RequestBodyLogLimit = 4096;
+    logging.ResponseBodyLogLimit = 4096;
+});
+
+// Configure logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.SetMinimumLevel(LogLevel.Information);
+
 // Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:4200", "http://localhost:4201", "http://localhost:5000")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
+            policy.WithOrigins(
+                "http://localhost:4200", 
+                "http://localhost:4201", 
+                "http://localhost:5000",
+                "https://clinic-scheduler-cpcfhfeha8hpb6gs.canadacentral-01.azurewebsites.net",
+                "https://*.vercel.app"
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
         });
 });
 
@@ -38,6 +60,12 @@ builder.Services.AddScoped<ClinicScheduling.Application.Services.IBillingService
 
 var app = builder.Build();
 
+// Add startup logging
+var logger = app.Services.GetRequiredService<ILogger<Program>>();
+logger.LogInformation("=== Clinic Scheduler API Starting ===");
+logger.LogInformation("Environment: {Environment}", app.Environment.EnvironmentName);
+logger.LogInformation("URLs: {Urls}", Environment.GetEnvironmentVariable("ASPNETCORE_URLS"));
+
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
@@ -45,13 +73,27 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Enable HTTP logging middleware
+app.UseHttpLogging();
+
 app.UseCors("AllowAngularApp");
 
-app.UseHttpsRedirection();
+// Only use HTTPS redirection in development
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 app.UseAuthorization();
 
+// Add health check endpoint for Azure
+app.MapGet("/health", () => "Healthy");
+
 app.MapControllers();
+
+logger.LogInformation("=== Clinic Scheduler API Started Successfully ===");
+logger.LogInformation("Health check available at: /health");
+logger.LogInformation("Patients API available at: /api/patients");
 
 app.Run();
 

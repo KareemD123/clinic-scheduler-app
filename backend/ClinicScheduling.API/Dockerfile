@@ -23,4 +23,9 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY ClinicScheduling.API/database.json .
+
+# Set environment variables for Azure
+ENV ASPNETCORE_URLS=http://+:80
+ENV ASPNETCORE_ENVIRONMENT=Production
+
 ENTRYPOINT ["dotnet", "ClinicScheduling.API.dll"]
