@@ -34,7 +34,7 @@ builder.Services.AddCors(options =>
             policy.WithOrigins(
                 "http://localhost:4200", 
                 "http://localhost:4201", 
-                "http://localhost:5000",
+                "http://localhost:5001",
                 "https://clinic-scheduler-cpcfhfeha8hpb6gs.canadacentral-01.azurewebsites.net",
                 "https://brave-island-0fb1dfd0f.2.azurestaticapps.net",
                 "https://*.azurestaticapps.net",
@@ -59,6 +59,18 @@ builder.Services.AddScoped<ClinicScheduling.Domain.Interfaces.IUnitOfWork, Clini
 builder.Services.AddScoped<ClinicScheduling.Application.Services.IPatientService, ClinicScheduling.Application.Services.PatientService>();
 builder.Services.AddScoped<ClinicScheduling.Application.Services.IAppointmentService, ClinicScheduling.Application.Services.AppointmentService>();
 builder.Services.AddScoped<ClinicScheduling.Application.Services.IBillingService, ClinicScheduling.Application.Services.BillingService>();
+
+// Register SQL Database Context (commented out for review - not connected to real database)
+// builder.Services.AddDbContext<ClinicScheduling.Infrastructure.Data.SqlDbContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register SQL Unit of Work (alternative to JSON - commented out for review)
+// builder.Services.AddScoped<ClinicScheduling.Domain.Interfaces.IUnitOfWork, ClinicScheduling.Infrastructure.UnitOfWork.SqlUnitOfWork>();
+
+// Register Background Job Service
+builder.Services.AddSingleton<ClinicScheduling.Infrastructure.Services.IBackgroundJobService, ClinicScheduling.Infrastructure.Services.BackgroundJobService>();
+builder.Services.AddHostedService<ClinicScheduling.Infrastructure.Services.BackgroundJobService>(provider => 
+    (ClinicScheduling.Infrastructure.Services.BackgroundJobService)provider.GetRequiredService<ClinicScheduling.Infrastructure.Services.IBackgroundJobService>());
 
 var app = builder.Build();
 
